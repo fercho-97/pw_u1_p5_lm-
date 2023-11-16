@@ -1,0 +1,34 @@
+* {
+    text-align: center;
+
+}
+
+h3 {
+    color: rgb(15, 191, 109);
+    font-style: oblique;
+}
+
+#idtitulo {
+    color: brown;
+}
+
+.morado {
+    color: purple;
+}
+
+img[src*="jpg"] {
+    height: 80px;
+    width: 80px;
+}
+
+img[src*="png"] {
+    height: 200px;
+    width: 200px;
+
+}
+
+h6:hover {
+
+    color: rgb(255, 5, 5);
+
+}
