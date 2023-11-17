@@ -4,33 +4,97 @@
     display: inline-block;
     font: bold 14px verdana;
     border: solid;
-    padding: 10px;
-    margin: 4px;
+    padding: 15px;
+    margin: 20px;
+
+    border-radius: 5px;
 }
 
-.cabecera h1,
-h6 {
+.cabecera h1,h6 {
     text-align: left;
 }
 
 .menu {
-    background-color: #72ab94;
-    text-align: left;
+    background-color: #98d4dc;
+    text-align: center;
+    
 }
 
-h1{
+h1 {
     font-size: 50px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
-body{
+body {
     text-align: center;
     background-color: gray;
 }
-.agrupar{
+
+.agrupar {
     border: 1px solid black;
-    background-color: white;
+    background-color: #c7ede8;
     width: 900px;
-    margin: 15px auto;
+    margin: 20px auto;
+}
+
+.cabecera {
+
+    background-color: #1693a5;
+    border: 5px inset #999999;
+    padding: 9px;
+
+}
+
+.seccion {
+
+    float: left;
+    width: 600px;
+    margin: 10px;
+}
+
+article {
+
+    background-color: #45b5c4;
+    border: 1px solid gray;
+    margin-bottom: 12px;
+    padding: 15px;
+}
+
+img[src*="/uploads/2019"] {
+
+    width: 470px;
+    height: 150px;
+    margin: auto auto;
+}
+
+time {
+    color: rgb(80, 80, 255);
+}
+
+article footer {
+
+    text-align: right;
+    font-weight: bold;
+}
+
+#referencias {
+
+    width: 250px;
+    float: right;
+    margin: 20px 0px;
+    margin-right: 30px;
+}
+
+.pie{
+clear: both;
+
+}
+
+#referencias blockquote{
+border: 3px dotted black;
+padding: 40px;
+background-color: #a0ded6;
+margin-bottom: 10px;
 }
