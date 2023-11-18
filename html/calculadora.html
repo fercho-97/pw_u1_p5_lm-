@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Calcualdora</h1>
+    </header>
+    <nav></nav>
+    <section>
+        <div><label for="idnumero1">Número 1:</label>
+            <input type="number"  id="idnumero1">
+    
+            <label for="idnumero2">Número 2:</label>
+            <input type="number"  id="idnumero2">
+    
+            <button onclick="document.getElementById('idnumero1').style.color='blue'">Cambiar Estilo 1</button>
+            <button onclick="document.getElementById('idnumero2').style.backgroundColor='red'">Cambiar Estilo 2</button>
+            <button onclick="document.getElementById('idimagen').src='https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2013/08/the-international-torneo-de-dota-2.jpg?resize=1500%2C893&quality=50&strip=all&ssl=1'">Cambiar imagen</button>
+            
+            <button onclick="document.getElementById('iddiv').innerHTML='<button>Hola</button>'">Presentar elemento HTML</button>
+            
+            <label for="" id="idresultado"></label>
+            <div id="iddiv">
+                <!--<button>Hola</button>--> 
+                
+            </div>
+        </div>
+        
+        <img src="https://i.blogs.es/e8bb20/d2cl/1366_2000.png" alt="No se puede presentar" id="idimagen">
+
+    </section>
+    
+    <footer>Todos los derechos reservados</footer>
+</body>
+</html>
