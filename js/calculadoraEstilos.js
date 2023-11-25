@@ -22,6 +22,7 @@ let numeros = [];
 const limpiar = () => {
 
     document.getElementById('idrespuesta').innerText = '';
+    document.getElementById('pantalla').value = '';
 
 }
 
@@ -40,16 +41,16 @@ function operacion(simbolo) {
 function calcular() {
 
     numeros.push(parseInt(document.getElementById("pantalla").value));
-    if (op == "+") {
+    if (op === "+") {
         document.getElementById("idrespuesta").innerHTML =
             "Resultado: " + sumar(numeros[0], numeros[1]);
-    } else if (op == "-") {
+    } else if (op === "-") {
         document.getElementById("idrespuesta").innerHTML =
             "Resultado: " + restar(numeros[0], numeros[1]);
-    } else if (op == "*") {
+    } else if (op === "*") {
         document.getElementById("idrespuesta").innerHTML =
             "Resultado: " + multiplicar(numeros[0], numeros[1]);
-    } else if (op == "/") {
+    } else if (op === "/") {
         document.getElementById("idrespuesta").innerHTML =
             "Resultado: " + dividir(numeros[0], numeros[1]);
     }

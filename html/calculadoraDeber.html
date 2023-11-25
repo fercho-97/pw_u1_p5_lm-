@@ -5,46 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="../js/calculadoraEstilos.js">
-
-    </script>
+    <script src="../js/calculadoraEstilos.js"></script>
+    <link rel="stylesheet" href="../css/estilosCalculadora.css">
 </head>
 
 <body>
-    <h1>Calcualdora con estilos</h1>
-    <header></header>
-    <nav></nav>
-    <section>
-        <div>
-            <button onclick="obtener(0)">0</button>
-            <button onclick="obtener(1)">1</button>
-            <button onclick="obtener(2)">2</button>
-            <button onclick="obtener(3)">3</button>
-            <button onclick="obtener(4)">4</button>
-            <button onclick="obtener(5)">5</button>
-            <button onclick="obtener(6)">6</button>
-            <button onclick="obtener(7)"> 7</button>
-            <button onclick="obtener(8)"> 8</button>
-            <button onclick="obtener(9)"> 9</button>
-            <button onclick="obtener(0)"> 0</button>
-            <button onclick="operacion('+')">+</button>
-            <button onclick="operacion('-')">-</button>
-            <button onclick="operacion('*')">*</button>
-            <button onclick="operacion('/')">/</button>
-            <button onclick="calcular()"> =</button>
-            <button onclick="limpiar()"> RESET</button>
+    <div class="container">
+        <header></header>
+        <nav></nav>
+
+        <section>
+            <div class="calculadora-general">
+                <h1>Calcualdora con estilos</h1>
+                <div class="presentacion">
+                    <input type="number" id="pantalla">
+                    <label id="idrespuesta"></label>
+
+                </div>
+
+                
+                <div class="calculadora-numeros">
+                    <button id="idnum1" onclick="obtener(1)">1</button>
+                    <button id="idnum2" onclick="obtener(2)">2</button>
+                    <button id="idnum3" onclick="obtener(3)">3</button>
+                    <button id="idnum4" onclick="obtener(4)">4</button>
+                    <button id="idnum5" onclick="obtener(5)">5</button>
+                    <button id="idnum6" onclick="obtener(6)">6</button>
+                    <button id="idnum7" onclick="obtener(7)"> 7</button>
+                    <button id="idnum8" onclick="obtener(8)"> 8</button>
+                    <button id="idnum9" onclick="obtener(9)"> 9</button>
+                    <button class="col-3" id="idnum0" onclick="obtener(0)"> 0</button>
+                </div>
+                <div class="calculadora-operaciones">
+                    <button id="idsum" onclick="operacion('+')">+</button>
+                    <button id="idrest" onclick="operacion('-')">-</button>
+                    <button id="idmult" onclick="operacion('*')">*</button>
+                    <button id="iddiv" onclick="operacion('/')">/</button>
+                    <button class="col-2" id="idcalcular" onclick="calcular()"> =</button>
+                    <button class="col-2" onclick="limpiar()"> RESET</button>
 
 
+                </div>
+            </div>
+        </section>
 
-        </div>
+        <footer></footer>
 
-
-        <label id="idrespuesta"></label>
-        <input type="number" id="pantalla">
-
-
-    </section>  
-    <footer></footer>
+    </div>
 </body>
 
 </html>
