@@ -49,3 +49,8 @@ margin-left: 35px;
     display: grid;
     grid-template-columns: repeat(2, 150px);
 }
+
+button:hover{
+background-color: aquamarine;
+    color: rgb(225, 76, 76);
+}
