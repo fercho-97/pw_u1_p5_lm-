@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="../js/calculadoraFinal.js"></script>
     <link rel="stylesheet" href="../css/calculadora.css">
 </head>
 
@@ -13,27 +14,27 @@
 <section>
     <div class="container">
         <div class="calculadora">
-            <div class="display">
-                Resultado
+            <div id="pantalla" class="display">
+        
             </div>
-            <button>C</button>
+            <button class="col-2" onclick="limpiar()">C</button>
             <button>&larr;</button>
-            <button>&#37;</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>&#215;</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>&#8722;</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>&#43;</button>
-            <button>0</button>
+            <button onclick="operacion('/')">/</button>
+            <button onclick="obtener('7')">7</button>
+            <button onclick="obtener('8')">8</button>
+            <button onclick="obtener('9')">9</button>
+            <button onclick="operacion('*')" >&#215;</button>
+            <button onclick="obtener('4')">4</button>
+            <button onclick="obtener('5')">5</button>
+            <button onclick="obtener('6')">6</button>
+            <button onclick="operacion('-')">&#8722;</button>
+            <button onclick="obtener('1')">1</button>
+            <button onclick="obtener('2')">2</button>
+            <button onclick="obtener('3')">3</button>
+            <button onclick="operacion('+')">&#43;</button>
+            <button class="col-2" onclick="obtener('0')">0</button>
             <button>&#46;</button>
-            <button>&#61;</button>
+            <button onclick="calcular()">&#61;</button>
         </div>
     </div>
 
