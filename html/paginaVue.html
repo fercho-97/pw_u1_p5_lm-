@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-
+    
 
 </head>
 
@@ -19,6 +18,7 @@
     <section>
 
         <h6>{{1+1}}</h6>
+        
         <div id="myApp">
 
             <h1> Hola Mundo </h1>
@@ -27,12 +27,18 @@
             <p> {{[1,2,3,4,5,6,7,8]}} </p>
             <p> {{true? 'Verdadero': 'Falso'}} </p>
             <p> {{false? 'Verdadero': 'Falso'}} </p>
+            <p> {{mensaje}}</p>
+            <p> {{valor}}</p>
 
+            <button v-on:click="cambiarMensaje">Cambiar mensaje</button>
+            <button v-on:click="cambiarNumero">CambiarNumero</button>
 
         </div>
+        
         <script src="../js/app.js"></script>
 
     </section>
+    
     <footer></footer>
 </body>
 
