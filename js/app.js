@@ -2,6 +2,14 @@ console.log("elementos Vue");
 
 console.log(Vue);
 
+const estudiantes = [{nombre:'Fernando', apellido:'Mosquera'},
+{nombre:'Alberto', apellido:'Perez'},
+{nombre:'Juan', apellido:'Chacón'},
+{nombre:'Damian', apellido:'Teran'},
+{nombre:'Mario', apellido:'Castillo'}];
+
+console.log(estudiantes);
+console.table(estudiantes);
 const app = Vue.createApp({
     /* template: `
      <h1>  Hola Mundo </h1>
@@ -28,7 +36,24 @@ const app = Vue.createApp({
             this.valor++;
             
 
+        }, agregarEstudiante() {
+            console.log('agregando estudiante');
+            const estu={nombre:this.nombre, apellido:this.apellido};
+            //this.lista.unshift(estu);
+            //this.lista.push(estu);
+            this.lista.push({nombre:this.nombre, apellido:this.apellido})
+        },
+        presionandoTecla(event){
+
+            console.log('Presionando');
+            console.log(event);
+
+            if(event.charCode=== 13){
+                this.agregarEstudiante();
+
+            }
         }
+
 
     },
     watch: {
@@ -38,8 +63,11 @@ const app = Vue.createApp({
     data() {
 
         return {
-            mensaje: 'Hola mundo desde VUe.JS',
-            valor: 100
+            mensaje: 'Hola mundo desde VUE.JS',
+            valor: 100,
+            lista: estudiantes,  
+            nombre: null,
+            apellido:null,  
 
         }
     }

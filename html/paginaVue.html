@@ -7,7 +7,7 @@
     <title>Document</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    
+
 
 </head>
 
@@ -18,7 +18,7 @@
     <section>
 
         <h6>{{1+1}}</h6>
-        
+
         <div id="myApp">
 
             <h1> Hola Mundo </h1>
@@ -33,12 +33,30 @@
             <button v-on:click="cambiarMensaje">Cambiar mensaje</button>
             <button v-on:click="cambiarNumero">CambiarNumero</button>
 
+            <hr>
+            <p>{{lista}}</p>
+            <label for="idnombre">Nombre</label>
+            <input type="text" name="" id="idnombre" v-model="nombre" >
+            <label for="idapellido">Apellido</label>
+            <input type="text" name="" id="idapellido" v-model="apellido" v-on:keypress="presionandoTecla">
+            <button v-on:click="agregarEstudiante">Agregar</button>
+            {{nombre}}
+            {{apellido}}
+            <ul>
+                <li v-for="({nombre,apellido},index) in lista">{{index+1}}: {{nombre }} - {{apellido}} <button>editar</button>
+                </li>
+<!--
+    <li v-for="{nombre,apellido} in lista">{{nombre }} - {{apellido}} <button>editar</button>
+                </li>
+-->
+            </ul>
+
         </div>
-        
+
         <script src="../js/app.js"></script>
 
     </section>
-    
+
     <footer></footer>
 </body>
 
