@@ -1,12 +1,15 @@
 console.log("elementos Vue");
 
+
 console.log(Vue);
 
-const estudiantes = [{nombre:'Fernando', apellido:'Mosquera'},
-{nombre:'Alberto', apellido:'Perez'},
-{nombre:'Juan', apellido:'Chacón'},
-{nombre:'Damian', apellido:'Teran'},
-{nombre:'Mario', apellido:'Castillo'}];
+const estudiantes = [{ nombre: 'Fernando', apellido: 'Mosquera' },
+{ nombre: 'Alberto', apellido: 'Perez' },
+{ nombre: 'Juan', apellido: 'Chacón' },
+{ nombre: 'Damian', apellido: 'Teran' },
+{ nombre: 'Darien', apellido: 'Castillo' }];
+
+console.log(estudiantes[4].nombre);
 
 console.log(estudiantes);
 console.table(estudiantes);
@@ -24,34 +27,39 @@ const app = Vue.createApp({
      `
  */
     methods: {
-        cambiarMensaje(){
+        cambiarMensaje() {
             console.log("cambiar mensaje");
             console.log(this.mensaje);
-            this.mensaje='valor cambiado';
-        
+            this.mensaje = 'valor cambiado';
+
         },
-        cambiarNumero(){
+        cambiarNumero() {
             console.log("cambiar valor");
             console.log(this.valor);
             this.valor++;
-            
+
 
         }, agregarEstudiante() {
             console.log('agregando estudiante');
-            const estu={nombre:this.nombre, apellido:this.apellido};
+            const estu = { nombre: this.nombre, apellido: this.apellido };
             //this.lista.unshift(estu);
             //this.lista.push(estu);
-            this.lista.push({nombre:this.nombre, apellido:this.apellido})
+            this.lista.push({ nombre: this.nombre, apellido: this.apellido })
         },
-        presionandoTecla(event){
+        presionandoTecla({ charCode }) {
 
             console.log('Presionando');
-            console.log(event);
+            console.log(charCode);
 
-            if(event.charCode=== 13){
+            if (charCode === 13) {
                 this.agregarEstudiante();
 
             }
+        },
+        agregarEstudianteMod({ charCode }) {
+
+            console.log('Presionando 2..');
+            console.log(this.nombre);
         }
 
 
@@ -65,9 +73,9 @@ const app = Vue.createApp({
         return {
             mensaje: 'Hola mundo desde VUE.JS',
             valor: 100,
-            lista: estudiantes,  
-            nombre: null,
-            apellido:null,  
+            lista: estudiantes,
+            nombre: null, //undefined
+            apellido: null,//undefined
 
         }
     }

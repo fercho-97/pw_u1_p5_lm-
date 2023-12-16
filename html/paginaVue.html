@@ -31,24 +31,30 @@
             <p> {{valor}}</p>
 
             <button v-on:click="cambiarMensaje">Cambiar mensaje</button>
-            <button v-on:click="cambiarNumero">CambiarNumero</button>
+            <button @click="cambiarNumero">CambiarNumero</button>
 
             <hr>
             <p>{{lista}}</p>
             <label for="idnombre">Nombre</label>
             <input type="text" name="" id="idnombre" v-model="nombre" >
             <label for="idapellido">Apellido</label>
-            <input type="text" name="" id="idapellido" v-model="apellido" v-on:keypress="presionandoTecla">
-            <button v-on:click="agregarEstudiante">Agregar</button>
+            <input type="text" name="" id="idapellido" v-model="apellido" @keypress.enter="agregarEstudianteMod">
+            <button @click="agregarEstudiante">Agregar</button>
             {{nombre}}
             {{apellido}}
             <ul>
-                <li v-for="({nombre,apellido},index) in lista">{{index+1}}: {{nombre }} - {{apellido}} <button>editar</button>
+                <li  v-for="({nombre,apellido},index) in lista">
+                    <p v-if="nombre!==null">
+                        {{index+1}}: {{nombre }} - {{apellido}} 
+                        <button v-if="nombre!==null">editar</button>
+                    </p>
+                    
                 </li>
 <!--
-    <li v-for="{nombre,apellido} in lista">{{nombre }} - {{apellido}} <button>editar</button>
+    <li v-for="{nombre,apellid  o} in lista">{{nombre }} - {{apellido}} <button>editar</button>
                 </li>
 -->
+        
             </ul>
 
         </div>
