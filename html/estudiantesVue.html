@@ -6,32 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
+    <link rel="stylesheet" href="..//css/estudianteVue.css">
 </head>
 
 <body>
-    <header></header>
-    <nav></nav>
-    <section>
+    <div class="container">
         <div id="myApp">
-            <h1> Hola Mundo </h1>
 
-            <form class="form" action="">
-                <p type="Nombre:"> <input type="text" name="" id="idnombre"> </p>
-                <p type="Apellido:"> <input type="text" name="" id="idapellido"></p>
-                <p type="Hobby:"> <input type="text" name="" id="idhobby"></p>
-                <p type="Genero:"> <input type="text" name="" id="idgenero"></p>
-                <p type="Pais:"> <input type="text" name="" id="idpais"></p>
-                <div class="btn">
-                    <button>GUARDAR &#9829;</button>
+            </header>
+            <h1>Estudiante</h1>
+            <nav></nav>
+            <section>
+
+                <div class="form" >
+
+                    <h2>Nuevo Estudiante</h2>
+                    <p type="Nombre:"> <input type="text" name="" id="idnombre" v-model="nombre"> </p>
+                    <p type="Apellido:"> <input type="text" name="" id="idapellido" v-model="apellido"></p>
+                    <p type="Hobby:"> <input type="text" name="" id="idhobby" v-model="hobby"></p>
+                    <p type="Genero:"> <input type="text" name="" id="idgenero" v-model="genero"></p>
+                    <p type="Pais:"> <input type="text" name="" id="idpais" v-model="pais"></p>
+                    <div class="btn">
+                        <button @click="agregarEstudiante()">GUARDAR &#9829;</button>
+                    </div>
+
+                </div>
+                <div>
+                    <h3>Estudiantes guardados</h3>
+
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Hobby</th>
+                            <th>Género</th>
+                            <th>Pais</th>
+
+                        </tr>
+                        <tr v-for="({nombre, apellido, hobby, genero, pais},index) in lista">
+
+                            <td>{{index+1}}</td>
+                            <td>{{nombre}}</td>
+                            <td>{{apellido}}</td>
+                            <td>{{hobby}}</td>
+                            <td>{{genero}}</td>
+                            <td>{{pais}}</td>
+                        </tr>
+
+                    </table>
                 </div>
 
+            </section>
+            
 
-            </form>
+            <footer></footer>
+
         </div>
-        <script src="../js/estudianteApp.js"></script>
-    </section>
-    <footer></footer>
+        
+    </div>
+    <script src="../js/estudianteApp.js"></script>
 
 </body>
 
